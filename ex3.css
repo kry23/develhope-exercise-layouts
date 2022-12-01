@@ -1,0 +1,248 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+main {
+  display: flex;
+  height: 100vh;
+}
+
+.side-content {
+  width: 250px;
+  background-color: rgb(240, 234, 234);
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-content-top {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.side-content-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.side-content-title span:first-child {
+  background-color: #333;
+  width: 30px;
+  height: 30px;
+}
+.side-content-title span + span {
+  background-color: #333;
+  width: 90px;
+  height: 30px;
+}
+.side-content-list {
+  margin-top: 40px;
+}
+.side-content-list li {
+  background-color: #333;
+  width: 100%;
+  height: 30px;
+}
+.side-content-list li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.side-content-bottom {
+  width: 100%;
+  height: 250px;
+  background-color: #333;
+  border-radius: 4px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px 15px;
+  gap: 40px;
+}
+.main-content-top-first {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content-top-first span:first-child {
+  width: 50%;
+  height: 30px;
+  background-color: #333;
+  border-radius: 4px;
+}
+.main-content-top-first span + span {
+  height: 30px;
+  background-color: #333;
+  width: 30px;
+}
+
+.main-content-top {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.main-content-top-second {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content-top-second p {
+  width: 25%;
+  background-color: #333;
+  height: 30px;
+}
+.main-content-top-second ul {
+  display: flex;
+}
+.main-content-top-second ul li {
+  background-color: #333;
+  height: 30px;
+  width: 100px;
+}
+
+.main-content-top-second ul li:not(:last-child) {
+  margin-right: 10px;
+}
+.main-content-middle {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 30px;
+}
+
+.main-content-middle div:first-child {
+  background-color: #333;
+  height: 40%;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.main-content-middle div + div {
+  display: flex;
+  gap: 10px;
+  height: 40%;
+  width: 100%;
+  gap: 40px;
+}
+
+.main-content-middle div + div span {
+  background-color: #333;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.right-side-content {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  height: 100vh;
+  width: 30%;
+  padding: 20px 15px;
+}
+
+.right-side-content-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.right-side-content-top span:first-child {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+.right-side-content-top span + span {
+  width: 60%;
+  height: 30px;
+  background-color: #333;
+}
+
+.right-side-content-middle {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.right-side-content-middle h5,
+.right-side-content-middle h6 {
+  margin: 25px 0;
+  width: 80%;
+  background-color: #333;
+  height: 30px;
+}
+.right-side-content-middle ul {
+  margin: 20px 0;
+}
+.right-side-content-middle ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.right-side-content-middle ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.right-side-content-middle ul li span {
+  width: 10%;
+  background-color: #333;
+  height: 30px;
+}
+.right-side-content-middle ul li a {
+  width: 80%;
+  background-color: #333;
+  height: 30px;
+}
+
+.right-side-content-bottom {
+  background-color: #333;
+  height: 300px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 993px) {
+  main {
+    flex-direction: column;
+  }
+  .main-content {
+  }
+  .right-side-content {
+    width: 100%;
+    height: 100vh;
+  }
+  .side-content {
+    height: 6%;
+    width: 100%;
+    display: flex;
+  }
+  .side-content-title span + span {
+    display: none;
+  }
+  .side-content-list {
+    display: flex;
+    margin-top: 0;
+    margin-left: 10px;
+    justify-content: end;
+  }
+  .side-content-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .side-content-list li {
+    width: 10%;
+    margin-right: 15px;
+    border-radius: 5px;
+  }
+  .side-content-bottom {
+    display: none;
+  }
+}
